@@ -1,0 +1,9 @@
+﻿@helper Botao(string nome, string classe) {
+    <input type="submit" class="@classe" value="@nome" />
+}
+
+@helper Mensagem(object msg, object classe) { 
+    <div class="@classe">
+        @msg
+    </div>
+}

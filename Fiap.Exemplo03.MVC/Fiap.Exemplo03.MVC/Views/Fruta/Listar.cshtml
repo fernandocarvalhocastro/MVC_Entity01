@@ -1,0 +1,23 @@
+﻿@model List<Fiap.Exemplo03.MVC.Models.Fruta>
+
+<table class="table table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Valor Calórico</th>
+        <th>Semente</th>
+        <th>Orgânico</th>
+        <th>Data de Cadastro</th>
+    </tr>
+    @foreach(var f in Model)
+    {
+        <tr>
+            <td>@f.Id</td>
+            <td>@f.Nome</td>
+            <td>@f.ValorCalorico</td>
+            <td>@f.Semente</td>
+            <td>@f.Organico</td>
+            <td>@f.DataCadastro</td>
+        </tr>
+    }
+</table>

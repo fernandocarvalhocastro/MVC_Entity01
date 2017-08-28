@@ -1,0 +1,34 @@
+﻿@model Fiap.Exemplo03.MVC.Models.Fruta
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+@UtilHtml.Mensagem(TempData["msg"],TempData["classe"])
+<h2>Cadastrar</h2>
+
+@using(Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(c=> c.Nome)
+        @Html.TextBoxFor(c=>c.Nome, new {@class="form-control", @placeholder="Entre com o nome" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c=> c.ValorCalorico)
+        @Html.TextBoxFor(c=> c.ValorCalorico, new {@class="form-control", @placeholder = "Ex.:20" })
+    </div>
+    <div class="form-group">
+        @Html.CheckBoxFor(c=>c.Organico)
+        @Html.LabelFor(c=> c.Organico)
+    </div>
+    <div class="form-group">
+        @Html.CheckBoxFor(c => c.Semente)
+        @Html.LabelFor(c => c.Semente)
+    </div>
+    <div class="form-group">
+        @UtilHtml.Botao("Salvar", "btn btn-primary")
+    </div>
+   //@Html.EditorForModel(Model) 
+
+}
+
