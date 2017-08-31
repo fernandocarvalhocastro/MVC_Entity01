@@ -1,0 +1,29 @@
+﻿@model Fiap.Exemplo03.MVC.Models.Produtor
+
+@{
+    ViewBag.Title = "Cadastrar Produtor";
+}
+
+@UtilHtml.Mensagem(TempData["msg"], TempData["classe"])
+<h2>Cadastrar Produtor</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(p=> p.Nome )
+        @Html.TextBoxFor(p=> p.Nome, new { @class="form-control", @placeholder="Entre com o nome do produtor" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.Limite)
+        @Html.TextBoxFor(p => p.Limite, new { @class = "form-control", @placeholder = "Entre com o nome do produtor" })
+    </div>
+    <div class="form-group">
+        @Html.CheckBoxFor(p => p.Certificado)
+        @Html.LabelFor(p => p.Certificado)
+    </div>
+    <div class="form-group">
+        @UtilHtml.Botao("Salvar", "btn btn-primary")
+    </div>
+}
+
+
